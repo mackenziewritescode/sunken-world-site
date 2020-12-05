@@ -1,0 +1,592 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/HelveticaNeueLTStd-Roman.otf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("./fonts/HelveticaNeueLTStd-Bd.otf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaBlack";
+  src: url("./fonts/HelveticaNeueLTStd-Blk.otf") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaLight";
+  src: url("./fonts/HelveticaLTStd-Light.otf") format("opentype");
+}
+
+@mixin max-400 {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+@mixin max-600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin max-900 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin max-1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin max-1800 {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin center-text {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#portfolio-wrapper * {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// ----------------------------------  +- Page 1 -+
+
+#portfolio-wrapper {
+  // margin: 0;
+  // padding: 0;
+  // -moz-box-sizing: border-box;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
+
+  font-family: "Helvetica", sans-serif;
+  position: absolute;
+  width: 100%;
+  // min-width: 380px;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y proximity;
+  // scroll-snap-type: y;
+
+  .page {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    scroll-snap-align: start;
+    margin: 0;
+  }
+
+  .main-text {
+    font-family: "HelveticaBlack", sans-serif;
+    font-size: 48px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 30px;
+    line-height: auto;
+
+    // @include max-900 {
+    //   font-size: 38px;
+    // }
+    // @include max-400 {
+    //   margin-left: 8vw;
+    //   font-size: 30px;
+    // }
+  }
+
+  .bottom-text {
+    @extend .main-text;
+    @include center-text;
+    position: absolute;
+    bottom: 65px;
+    @media (max-width: 700px) {
+      font-size: 28px;
+    }
+  }
+
+  .arrows {
+    @include center-text;
+    position: absolute;
+    bottom: 16px;
+    .arrow {
+      font-size: 40px;
+      margin: 0 80px;
+      color: rgba(0, 0, 0, 0.5);
+      @media (max-width: 650px) {
+        margin: 0 40px;
+      }
+    }
+  }
+  @keyframes arrow-bounce {
+    from {
+      bottom: 16px;
+      opacity: 0.4;
+    }
+    to {
+      bottom: 10px;
+      opacity: 0.3;
+    }
+  }
+  @keyframes arrow-bounce-solid {
+    from {
+      bottom: 16px;
+    }
+    to {
+      bottom: 10px;
+    }
+  }
+
+  #page-1 {
+    background: red;
+    background: url(images/forest-3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    $page-fade: 1s;
+
+    @keyframes intro-fade-in {
+      from {
+        color: white;
+      }
+      to {
+        color: black;
+      }
+    }
+
+    @keyframes background-slide {
+      from {
+        top: -110vh;
+      }
+      to {
+        top: 0px;
+      }
+    }
+
+    #page-1-main-text {
+      @include noselect;
+      position: absolute;
+      margin: 0;
+      padding: 10vh 0 0 5vw;
+      width: 100%;
+      height: 100%;
+      font-size: 160px;
+      line-height: 150px;
+      letter-spacing: -11px;
+      background: white;
+      mix-blend-mode: screen;
+      top: -110vh;
+      animation: background-slide $page-fade ease-out;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+
+      #page-1-block-1 {
+        color: white;
+        animation: intro-fade-in 2s;
+        animation-delay: $page-fade + 1.5s;
+        animation-fill-mode: forwards;
+      }
+      #page-1-block-2 {
+        color: white;
+        animation: intro-fade-in 2s;
+        animation-delay: $page-fade + 3s;
+        animation-fill-mode: forwards;
+      }
+      #page-1-block-3 {
+        color: white;
+        animation: intro-fade-in 2s;
+        animation-delay: $page-fade + 4.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @media only screen and (max-height: 970px) {
+        font-size: 120px;
+        line-height: 110px;
+        letter-spacing: -3px;
+      }
+
+      @media only screen and (max-width: 900px) {
+        font-size: 120px;
+        line-height: 110px;
+        letter-spacing: -9px;
+      }
+      @media only screen and (max-height: 750px) {
+        font-size: 90px;
+        line-height: 80px;
+        letter-spacing: -7px;
+      }
+      @media only screen and (max-width: 700px) {
+        font-size: 90px;
+        line-height: 80px;
+        letter-spacing: -7px;
+      }
+      @media only screen and (max-width: 500px) {
+        font-size: 60px;
+        line-height: 50px;
+        letter-spacing: -5px;
+      }
+    }
+    #page-1-block-4 {
+      opacity: 0;
+      color: rgb(0, 0, 0);
+      animation: block-4-fade 1s ease-out forwards;
+      animation-delay: $page-fade + 6s;
+    }
+    @keyframes block-4-fade {
+      0% {
+        transform: translate3d(0, -30px, 0);
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .arrows {
+      opacity: 0;
+      animation-name: arrow-fade-in, arrow-bounce;
+      animation-duration: 1000ms, 1000ms, 1000ms;
+      animation-delay: $page-fade + 6.3s, $page-fade + 7.3s;
+      animation-timing-function: ease-out, ease-in-out;
+      animation-iteration-count: 1, infinite;
+      animation-fill-mode: forwards, forwards;
+      animation-direction: normal, alternate;
+    }
+    @keyframes arrow-fade-in {
+      from {
+        transform: translate3d(0, -30px, 0);
+        opacity: 0;
+      }
+      to {
+        bottom: 16px;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  // ------------------------------------ Page 2 -+
+
+  #page-2 {
+    color: white;
+    background: rgb(117, 227, 255);
+    background: url(images/sea-2.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    #page-2-text-wrap {
+      margin-top: 15vh;
+      width: 100%;
+      background: black;
+      padding: 40px 0;
+      opacity: 0;
+
+      p {
+        color: white;
+        font-size: 90px;
+        line-height: 80px;
+        letter-spacing: -4px;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 50px;
+          line-height: 40px;
+          letter-spacing: -3px;
+        }
+        @media only screen and (max-height: 750px) {
+          font-size: 50px;
+          line-height: 40px;
+          letter-spacing: -3px;
+        }
+        @media only screen and (max-width: 700px) {
+          font-size: 40px;
+          line-height: 33px;
+          letter-spacing: -2px;
+        }
+      }
+
+      .main-text {
+        position: relative;
+        transform: translateX(-15vw);
+        opacity: 0;
+      }
+    }
+
+    .page-2-bottom {
+      @media only screen and (max-width: 1200px) {
+        font-size: 28px;
+      }
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .arrows {
+      animation-name: arrow-bounce-solid;
+      animation-duration: 1000ms;
+      animation-delay: 0;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+    }
+    .arrow {
+      color: white;
+      font-size: 50px;
+    }
+  }
+
+  // ------------------------------------ Page 3 -- Projects -+
+
+  $hover: rgb(32, 230, 98);
+
+  #page-3 {
+    background: rgb(114, 114, 114);
+    height: auto;
+    min-height: 100vh;
+    color: white;
+    background: url(images/mountain-3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    border-top: 4px solid white;
+  }
+
+  #page-3-title {
+    @include center-text;
+    font-family: "HelveticaBlack", sans-serif;
+    font-size: 90px;
+    margin: 5vh 0 20px;
+    opacity: 0;
+  }
+
+  #project-wrap {
+    display: block;
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-align: center;
+    @include max-400 {
+      width: 100vw;
+    }
+
+    .project {
+      display: inline-block;
+      margin: 20px 40px;
+      width: 300px;
+      transform: translateX(-40px);
+      opacity: 0;
+
+      .project-img-link {
+        display: block;
+        width: 300px;
+        height: 200px;
+        background: $hover;
+        border-radius: 20px;
+      }
+
+      .project-title {
+        font-family: "HelveticaBlack";
+        font-size: 24px;
+        margin: 10px;
+      }
+
+      .project-img {
+        border-radius: 20px;
+        border: 2px solid white;
+        transition: 0.2s;
+      }
+      .project-img:hover {
+        border: 2px solid $hover;
+      }
+      .project-img:active {
+        border: 2px solid rgb(252, 255, 88);
+      }
+
+      .project-description {
+        font-size: 16px;
+        height: 60px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+
+      .project-link,
+      .project-github {
+        @include link;
+        margin: 0 14px;
+        font-family: "HelveticaBold";
+        font-size: 18px;
+        letter-spacing: 1px;
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 0;
+        width: 100px;
+        border-radius: 10px;
+        border: 1px solid white;
+        transition: 0.5s;
+      }
+      .project-link:hover,
+      .project-github:hover {
+        background: $hover;
+        color: black;
+      }
+      .project-link:active,
+      .project-github:active {
+        background: rgb(252, 255, 88);
+      }
+    }
+  }
+
+  .page-3-bottom {
+    animation-name: arrow-bounce-solid;
+    animation-duration: 1000ms;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    opacity: 0;
+
+    .arrow {
+      color: white;
+    }
+  }
+
+  // ----------------------------------  +- Page 4 -+
+  #page-4 {
+    $diameter: 250px;
+    $icon-height: 120px;
+
+    background: rgb(120, 156, 129);
+    height: auto;
+    min-height: 100vh;
+    color: white;
+    background: url(images/city-3.jpg) no-repeat center center fixed;
+    background-size: cover;
+    border-top: 4px solid white;
+
+    .page-4-text {
+      @include center-text;
+      font-size: 60px;
+      width: 80vw;
+      max-width: 1400px;
+      letter-spacing: -3px;
+      line-height: 60px;
+      opacity: 0;
+
+      @include max-900 {
+        font-size: 48px;
+      }
+    }
+
+    #page-4-block-1 {
+      margin-top: 10vh;
+      a {
+        @include link;
+        // color: rgb(255, 223, 81);
+        color: rgb(255, 240, 174);
+        transition: 0.5s;
+      }
+      a:hover {
+        color: black;
+      }
+    }
+
+    #page-4-block-2 {
+      margin-top: 60px;
+    }
+
+    #page-4-block-3 {
+      @include center-text;
+      margin-top: 60px;
+    }
+
+    #contact-wrap {
+      display: block;
+      width: 80vw;
+      margin: 0 auto 100px;
+      text-align: center;
+      font-size: $icon-height;
+      @include max-400 {
+        width: 100vw;
+      }
+    }
+
+    .contact-circle {
+      display: inline-block;
+      margin: 40px;
+      width: $diameter;
+      height: $diameter;
+      border-radius: $diameter / 2;
+      background: rgb(255, 225, 91);
+      transform: scale(0.1);
+      opacity: 0;
+
+      @include max-900 {
+        width: $diameter / 1.6;
+        height: $diameter / 1.6;
+        font-size: $icon-height / 1.6;
+      }
+    }
+
+    .contact-icon {
+      @include link;
+      color: white;
+      margin-top: $diameter / 2 - $icon-height / 2;
+      transition: 0.3s;
+
+      @include max-900 {
+        margin-top: $diameter / 3.2 - $icon-height / 3.2;
+      }
+    }
+
+    .contact-circle:hover .contact-icon {
+      transform: scale(1.3);
+    }
+
+    .contact-circle:hover {
+      background-image: linear-gradient(
+        to right,
+        #ffe15b 0%,
+        #ffe15b 33%,
+        #5fff94 33%,
+        #5fff94 67%,
+        #41d3ff 67%,
+        #41d3ff 100%
+      );
+      animation: circle-animate 1.7s linear infinite;
+      transition: 1s;
+    }
+
+    @keyframes circle-animate {
+      to {
+        background-position: 26vw;
+      }
+    }
+
+    #portfolio-footer {
+      @include center-text;
+      position: absolute;
+      bottom: 30px;
+
+      a {
+        @include link;
+        color: rgb(255, 240, 174);
+      }
+    }
+  }
+}

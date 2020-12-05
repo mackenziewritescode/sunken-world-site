@@ -1,0 +1,303 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/HelveticaNeueLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("./fonts/HelveticaNeueLTStd-Bd.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "HelveticaBlack";
+  src: url("./fonts/HelveticaNeueLTStd-Blk.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "HelveticaLight";
+  src: url("./fonts/HelveticaLTStd-Light.otf") format("opentype");
+}
+
+#wrapper {
+  font-family: "Helvetica", sans-serif;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+  background: white;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,d1eeff+100 */
+  background: white;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, white), to(#d1eeff));
+  background: linear-gradient(to bottom, white 0%, white 50%, #d1eeff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1eeff',GradientType=0 );
+  /* IE6-9 */
+}
+
+#wrapper .portfolio {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 99;
+  height: 40px;
+  width: 180px;
+  color: white;
+  background: rgba(76, 196, 243, 0.5);
+  border-radius: 0 0 40px 0;
+  -moz-border-radius: 0 0 40px 0;
+  -webkit-border-radius: 0 0 40px 0;
+  font-size: 20px;
+  margin: 0;
+  line-height: 6px;
+  text-decoration: none;
+  padding-left: 10px;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+#wrapper .portfolio:hover {
+  background: #4281ff;
+  color: white;
+}
+
+#wrapper .portfolio:active {
+  background: #ffe77b;
+  color: white;
+}
+
+#wrapper .portfolio:focus {
+  outline: none;
+}
+
+#wrapper #footer {
+  color: #b1b1b1;
+  text-align: center;
+}
+
+#wrapper #footer .footer-link {
+  text-decoration: none;
+  color: #4d79d1;
+}
+
+#wrapper #app-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  min-height: 600px;
+}
+
+#wrapper #app-wrap #info {
+  width: 500px;
+  display: inline-block;
+  margin-top: 180px;
+  margin: 130px auto 0 50px;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align: center;
+  color: #acacac;
+}
+
+#wrapper #app-wrap #info p a {
+  text-decoration: none;
+  color: #4d79d1;
+}
+
+#wrapper #app-wrap #app {
+  width: 100%;
+  height: 400px;
+  display: -ms-grid;
+  display: grid;
+  padding: 0;
+  margin: auto;
+  margin-top: 0;
+  -ms-grid-columns: 120px 120px 120px 120px 120px;
+      grid-template-columns: 120px 120px 120px 120px 120px;
+  -ms-grid-rows: 1fr 2fr 2fr;
+      grid-template-rows: 1fr 2fr 2fr;
+      grid-template-areas: "header header header header header" "timer1 display display display timer2" ". loop-btn play-btn reset-btn .";
+}
+
+#wrapper #app-wrap #app h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: header;
+  margin: 0;
+  text-align: center;
+  height: 100px;
+  font-size: 76px;
+  text-transform: uppercase;
+}
+
+#wrapper #app-wrap #app .timer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper #app-wrap #app .timer-wrap .timer p {
+  font-size: 40px;
+  text-align: center;
+  margin: 3px 0 2px 0;
+}
+
+#wrapper #app-wrap #app #left-timer-wrap {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: timer1;
+}
+
+#wrapper #app-wrap #app #left-timer-wrap #timer1-header {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  text-align: right;
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+#wrapper #app-wrap #app #display {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: display;
+  color: white;
+  background: black;
+  font-size: 100px;
+  width: 318px;
+  text-align: center;
+  height: 144px;
+  line-height: 140px;
+  border: 3px solid black;
+  border-radius: 12px;
+  margin: 0 auto;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e4f5fc+0,bfe8f9+11,9fd8ef+22,004ce5+100 */
+  background: #e4f5fc;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #e4f5fc 0%, #bfe8f9 11%, #9fd8ef 22%, #004ce5 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#004ce5',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+#wrapper #app-wrap #app button {
+  background: none;
+  color: black;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border: 3px solid black;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  background: white;
+}
+
+#wrapper #app-wrap #app button:focus {
+  outline: none;
+}
+
+#wrapper #app-wrap #app button:active {
+  background: #ffe77b;
+}
+
+#wrapper #app-wrap #app #loop-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: loop-btn;
+}
+
+#wrapper #app-wrap #app #start-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: play-btn;
+}
+
+#wrapper #app-wrap #app #reset-btn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: reset-btn;
+}
+
+#wrapper #app-wrap #app .val-btn {
+  margin: 0;
+  height: 50px;
+  width: 70px;
+}
+
+#wrapper #app-wrap #app .no-click {
+  background: #e6e6e6;
+  cursor: default;
+}
+
+#wrapper #app-wrap #app .no-click:active {
+  color: black;
+  background: #e6e6e6;
+}
+
+#wrapper #app-wrap #app img {
+  height: 40px;
+  fill: blue;
+}
+
+#wrapper #app-wrap #app #right-timer-wrap {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: timer2;
+}
+
+#wrapper #app-wrap #app #right-timer-wrap #timer2-header {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-left: 5px;
+}
+
+#wrapper #app-wrap #app #right-timer-wrap #timer2 {
+  margin-left: 7px;
+  margin-right: -4px;
+}
+/*# sourceMappingURL=style.css.map */

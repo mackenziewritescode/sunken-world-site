@@ -1,0 +1,22 @@
+{
+  "name": "sunken-world",
+  "version": "1.0.0",
+  "description": "The portfolio of Mackenzie Charlton",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.6",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^6.3.0"
+  }
+}

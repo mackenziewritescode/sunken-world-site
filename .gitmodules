@@ -1,3 +1,6 @@
 [submodule "react/src/markdown-app-source"]
 	path = react/src/markdown-app
 	url = https://github.com/mackenziewritescode/markdown-app-source.git
+[submodule "react/src/calculator-source"]
+	path = react/src/calculator
+	url = https://github.com/mackenziewritescode/calculator-source.git

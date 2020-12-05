@@ -1,0 +1,3 @@
+[submodule "react/src/markdown-app-source"]
+	path = react/src/markdown-app
+	url = https://github.com/mackenziewritescode/markdown-app-source.git

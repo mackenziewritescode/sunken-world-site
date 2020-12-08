@@ -10,3 +10,6 @@
 [submodule "react/src/drum-machine-source"]
 	path = react/src/drum-machine
 	url = https://github.com/mackenziewritescode/drum-machine-source.git
+[submodule "react/src/portfolio-source"]
+	path = react/src/portfolio
+	url = https://github.com/mackenziewritescode/portfolio-source.git

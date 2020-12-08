@@ -4,3 +4,6 @@
 [submodule "react/src/calculator-source"]
 	path = react/src/calculator
 	url = https://github.com/mackenziewritescode/calculator-source.git
+[submodule "react/src/photo-search-source"]
+	path = react/src/photo-search
+	url = https://github.com/mackenziewritescode/photo-search-source.git

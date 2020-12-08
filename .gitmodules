@@ -7,3 +7,6 @@
 [submodule "react/src/photo-search-source"]
 	path = react/src/photo-search
 	url = https://github.com/mackenziewritescode/photo-search-source.git
+[submodule "react/src/drum-machine-source"]
+	path = react/src/drum-machine
+	url = https://github.com/mackenziewritescode/drum-machine-source.git

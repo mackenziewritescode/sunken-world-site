@@ -13,3 +13,6 @@
 [submodule "react/src/portfolio-source"]
 	path = react/src/portfolio
 	url = https://github.com/mackenziewritescode/portfolio-source.git
+[submodule "interval-timer"]
+	path = interval-timer
+	url = https://github.com/mackenziewritescode/interval-timer.git

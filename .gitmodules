@@ -16,3 +16,6 @@
 [submodule "interval-timer"]
 	path = interval-timer
 	url = https://github.com/mackenziewritescode/interval-timer.git
+[submodule "react/src/restful-forum-source"]
+	path = react/src/restful-forum
+	url = https://github.com/mackenziewritescode/restful-forum-source.git

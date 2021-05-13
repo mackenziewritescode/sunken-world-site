@@ -5,12 +5,14 @@ import Calculator from "./calculator/components/Calculator";
 import DrumMachine from "./drum-machine/components/DrumMachine";
 import Markdown from "./markdown-app/Markdown";
 import PhotoSearch from "./photo-search/PhotoSearch";
+import { default as RestfulForum } from "./restful-forum/App";
 
 function ReactRouter() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact component={Portfolio} />
+        <Route path="/restful-forum" component={RestfulForum} />
         <Route path="/calculator" component={Calculator} />
         <Route path="/drum-machine" component={DrumMachine} />
         <Route path="/markdown-app" component={Markdown} />

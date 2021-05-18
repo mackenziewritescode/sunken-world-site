@@ -1,4 +1,5 @@
 config/server.js
 react/node_modules
 react/build
+react/build-2020
 node_modules

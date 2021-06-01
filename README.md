@@ -2,4 +2,4 @@
 
 This repository links to the submodules of my portfolio and all of its projects. Visit the website [here](https://www.sunkenworld.com/). 
 
-If you want to see the code for the portfolio, check it out [here](https://github.com/mackenziewritescode/portfolio).
+If you want to see the code for the portfolio, check it out [here](https://github.com/mackenziewritescode/portfolio). All of the projects are pinned on my [GitHub homepage](https://github.com/mackenziewritescode).
